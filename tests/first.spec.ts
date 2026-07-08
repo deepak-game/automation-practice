@@ -13,9 +13,3 @@ test("Enter email", async ({ page }) => {
   await page.locator("#email").fill("jonas@gmail.com");
   await page.waitForTimeout(1000);
 });
-
-test("Enter phone", async ({ page }) => {
-  await page.goto("https://testautomationpractice.blogspot.com/");
-  await page.locator("#phone").fill("+91-9876543210");
-  await page.waitForTimeout(1000);
-});
