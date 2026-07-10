@@ -15,12 +15,6 @@ test("Enter email", async ({ page }) => {
   await page.waitForTimeout(1000);
 });
 
-test("Enter phone @regression", async ({ page }) => {
-  await page.goto("https://testautomationpractice.blogspot.com/");
-  await page.locator("#phone").fill("+91-9876543210");
-  await page.waitForTimeout(1000);
-});
-
 // export class LoginPage {
 //   readonly page: Page;
 //   readonly usernameInput = () => this.page.getByLabel("Username");
