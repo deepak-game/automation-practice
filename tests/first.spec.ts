@@ -1,5 +1,5 @@
 import { test, expect, Page } from "@playwright/test";
-import App from "./pom.spec";
+import App from "./pom";
 
 test("Enter name", async ({ page, browserName, context }) => {
   const newApp = new App(page);
