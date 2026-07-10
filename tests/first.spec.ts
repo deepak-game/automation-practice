@@ -9,13 +9,30 @@ test("Enter name", async ({ page, browserName, context }) => {
 });
 
 test("Enter email", async ({ page }) => {
+  test.fail();
   await page.goto("https://testautomationpractice.blogspot.com/");
   await page.locator("#email").fill("jonas@gmail.com");
   await page.waitForTimeout(1000);
 });
 
-test("Enter phone", async ({ page }) => {
+test("Enter phone @regression", async ({ page }) => {
   await page.goto("https://testautomationpractice.blogspot.com/");
   await page.locator("#phone").fill("+91-9876543210");
   await page.waitForTimeout(1000);
 });
+
+// export class LoginPage {
+//   readonly page: Page;
+//   readonly usernameInput = () => this.page.getByLabel("Username");
+//   readonly loginButton = () =>
+//     this.page.getByRole("button", { name: "Log in" });
+
+//   constructor(page: Page) {
+//     this.page = page;
+//   }
+
+//   async login(user: string, pass: string) {
+//     await this.usernameInput().fill(user);
+//     await this.loginButton().click();
+//   }
+// }
