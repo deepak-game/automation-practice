@@ -19,8 +19,6 @@ test("get started link", async ({ page }) => {
   ).toBeVisible();
 });
 
-import { test, expect } from "@playwright/test";
-
 test("validating POST request", async ({ request }) => {
   const response = await request.post("https://dummyjson.com/auth/login", {
     headers: {
